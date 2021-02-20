@@ -10,7 +10,7 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
       <h1 className="LeftTitle">{leftTitle}</h1>
       <div className="Left">
       </div>
-      <Years from={2015} to={2020} />
+      <Years from={2015} to={2021} />
       <h1 className="RightTitle">{rightTitle}</h1>
       <div className="Right">
       </div>
