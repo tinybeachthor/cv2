@@ -1,0 +1,36 @@
+.Years {
+  grid-area: Years;
+
+  display: flex;
+  flex-direction: column;
+}
+.Years > .Year {
+  position: relative;
+  flex: 1 1 auto;
+
+  text-align: center;
+
+  display: grid;
+  grid-template-areas: 'Bar' 'Label';
+  grid-template-rows: auto min-content;
+  grid-template-columns: 100%;
+}
+.Years > .Year > .Bar {
+  grid-area: Bar;
+
+  width: 2px;
+  margin: 0 auto;
+
+  background: #000;
+}
+.Years > .Year > .Label {
+  grid-area: Label;
+
+  display: inline;
+
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #000;
+  cursor: default;
+}

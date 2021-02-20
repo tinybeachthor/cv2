@@ -1,0 +1,8 @@
+.Timeline {
+  padding: 80px 10px 30px 10px;
+
+  display: grid;
+  grid-template-areas: 'Years Content';
+  grid-template-columns: 30px auto;
+  grid-template-rows: 100%;
+}
