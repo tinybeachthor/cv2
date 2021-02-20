@@ -4,6 +4,10 @@ with pkgs;
 
 mkShell {
   buildInputs = [
+    git
+
+    nodejs
+    yarn
   ];
   shellHook = ''
   '';
