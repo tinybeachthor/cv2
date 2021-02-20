@@ -7,7 +7,10 @@ import {education} from './cv.json'
 function App() {
   return (
     <div className="App">
-      <Timeline />
+      <Timeline
+        leftTitle="education"
+        rightTitle="experience"
+      />
     </div>
   );
 }

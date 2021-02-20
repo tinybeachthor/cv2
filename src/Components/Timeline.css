@@ -2,7 +2,24 @@
   padding: 80px 10px 30px 10px;
 
   display: grid;
-  grid-template-areas: 'Years Content';
-  grid-template-columns: 30px auto;
-  grid-template-rows: 100%;
+  grid-template-areas:
+  'LeftTitle null  RightTitle'
+  'Left      Years Right';
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: min-content auto;
+}
+
+.LeftTitle {
+  grid-area: LeftTitle;
+  text-align: right;
+}
+.Left {
+  grid-area: Left;
+}
+.RightTitle {
+  grid-area: RightTitle;
+  text-align: left;
+}
+.Right {
+  grid-area: Right;
 }
