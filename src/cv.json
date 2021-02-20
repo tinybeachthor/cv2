@@ -1,0 +1,30 @@
+{
+  "education": [
+    {
+      "date": {
+        "from": "2018-09-01"
+      },
+      "title": "Delft University of Technology",
+      "subtitle": "Computer Science and Engineering",
+      "link": "https://www.tudelft.nl/en/"
+    },
+    {
+      "date": {
+        "from": "2017-09-01",
+        "to": "2018-07-01"
+      },
+      "title": "University College Nordjylland",
+      "subtitle": "Software Engineering",
+      "link": "https://www.ucn.dk/english/home"
+    },
+    {
+      "date": {
+        "from": "2015-08-01",
+        "to": "2017-07-01"
+      },
+      "title": "Slovak University of Technology",
+      "subtitle": "Robotics and Cybernetics",
+      "link": "https://www.stuba.sk/english.html"
+    }
+  ]
+}
