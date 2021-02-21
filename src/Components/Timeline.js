@@ -5,6 +5,10 @@ import Years from './Years'
 
 import './Timeline.css'
 
+const randomHues = (count, start = 0, step = 60) =>
+  [...Array(count).keys()]
+    .map(i => Math.floor(start + step * i) % 360)
+
 const Timeline = ({leftTitle, left, rightTitle, right}) => {
   let from =
     DateUtils.roundToYear(
@@ -12,6 +16,8 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
       [...left, ...right].map(x => x.date)
     ))
   const to = new Date()
+
+  const leftColors = randomHues(left.length, 120, 60)
 
   return (
     <div className="Timeline">
@@ -26,6 +32,7 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
               style={{
                 bottom: DateUtils.datePointInRange(from, to, date.from) + '%',
                 height: DateUtils.datesToPercentage(from, to, date.from, date.to) + '%',
+                backgroundColor: `hsl(${leftColors[index]}, 55%, 80%)`
               }}/>
           )
         }
