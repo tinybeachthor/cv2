@@ -12,6 +12,7 @@
 .LeftTitle {
   grid-area: LeftTitle;
   text-align: right;
+  margin-right: 5px;
 }
 .Left {
   grid-area: Left;
@@ -21,6 +22,7 @@
 .RightTitle {
   grid-area: RightTitle;
   text-align: left;
+  margin-left: 5px;
 }
 .Right {
   grid-area: Right;
@@ -28,12 +30,15 @@
   position: relative;
 }
 
-.Left > .Bars > * {
+.Bars > * {
   position: absolute;
-  right: 5px;
   width: 10px;
-
-  background: blue;
+}
+.Left > .Bars > * {
+  right: 5px;
+}
+.Right > .Bars > * {
+  left: 5px;
 }
 
 .LeftTitle, .RightTitle {

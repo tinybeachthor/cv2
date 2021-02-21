@@ -13,7 +13,7 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
   let from =
     DateUtils.roundToYear(
     DateUtils.earliestDate(
-      [...left, ...right].map(x => x.date)
+      [...left, ...right].map(x => x.date.from)
     ))
   const to = new Date()
 

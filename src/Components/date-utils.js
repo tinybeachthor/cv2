@@ -4,10 +4,10 @@ const utils = {
   },
   earliestDate: (dates) => {
     let earliest = new Date()
-    for (let {from} of dates) {
-      from = new Date(from)
-      if (from < earliest)
-        earliest = from
+    for (let date of dates) {
+      date = new Date(date)
+      if (date < earliest)
+        earliest = date
     }
     return earliest
   },
