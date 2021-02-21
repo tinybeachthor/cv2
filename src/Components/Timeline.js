@@ -39,6 +39,19 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
         </div>
         <div className="Items">
         {
+          left.map(({title, subtitle, text, link}, index) =>
+            <div
+              key={index}
+              style={{
+                borderTop: `solid 5px hsl(${leftColors[index]}, 55%, 80%)`
+              }}>
+              <a href={link}>
+                <h1>{title}</h1>
+                <h2>{subtitle}</h2>
+                <p>{text}</p>
+              </a>
+            </div>
+          )
         }
         </div>
       </div>

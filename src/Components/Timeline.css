@@ -41,8 +41,43 @@
   left: 5px;
 }
 
+.Items {
+  min-height: 100%;
+  margin-right: 25px;
+
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  align-items: stretch;
+  grid-gap: 2rem;
+}
+.Items > div {
+  padding: 5px;
+}
+.Items > div > a {
+  color: black;
+  text-decoration: none;
+}
+.Items > div p {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
 .LeftTitle, .RightTitle {
   font-family: monospace;
   font-size: 22px;
   font-weight: 500;
+}
+.Items {
+  font-family: monospace;
+  text-align: left;
+}
+.Items h1 {
+  font-size: 16px;
+  margin: 0;
+}
+.Items h2 {
+  font-size: 14px;
+  margin: 0;
 }
