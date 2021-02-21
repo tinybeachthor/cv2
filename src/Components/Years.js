@@ -3,8 +3,10 @@ import React from 'react'
 import './Years.css'
 
 const Years = ({ from, to }) => {
-  const years = [...Array(to - from).keys()]
-    .map(i => to - i - 1)
+  from = from.getFullYear()
+  to = to.getFullYear()
+
+  const years = [...Array(to - from).keys()].map(i => to - i - 1)
 
   return (
     <div className="Years">
