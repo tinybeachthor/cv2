@@ -2,6 +2,11 @@ const utils = {
   roundToYear: (date) => {
     return new Date(date.getFullYear(), 0, 1, 0, 0, 0, 0)
   },
+  yearFraction: (date) => {
+    const days = (date.getTime() - new Date(date.getFullYear(), 0)) / (1000 * 60 * 60 * 24)
+    const fraction = days / 365
+    return Math.min(0.0, Math.max(fraction, 1.0))
+  },
   earliestDate: (dates) => {
     let earliest = new Date()
     for (let date of dates) {
