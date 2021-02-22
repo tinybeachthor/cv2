@@ -4,7 +4,7 @@
   display: grid;
   grid-template-areas:
     'Name  Contacts'
-    'Links null';
+    'Links Contacts';
   grid-template-columns: max-content auto min-content;
   grid-template-rows: min-content min-content;
 }
@@ -44,7 +44,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 .Header .Contacts > * {
   width: 100%;

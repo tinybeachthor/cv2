@@ -17,8 +17,8 @@ const Header = ({name, links, contacts}) => {
             bgColor="hsl(0, 0%, 5%)"
             fgColor="white"
             style={{
-              height: 30,
-              width: 30,
+              height: 37.5,
+              width: 37.5,
             }}
           />
         )
