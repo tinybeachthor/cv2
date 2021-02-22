@@ -1,6 +1,6 @@
 import './App.css';
 
-import Timeline from './Components/Timeline'
+import Timeline from './Timeline/Timeline'
 
 import {education, experience} from './cv.json'
 
