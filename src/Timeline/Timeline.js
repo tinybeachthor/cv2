@@ -17,7 +17,34 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
     ))
   const to = new Date()
 
-  const leftColors = randomHues(left.length, 120, 60)
+  const colors = randomHues(left.length + right.length, 80, 45)
+  const leftColors = colors.slice(0, left.length)
+  const rightColors = colors.slice(left.length, left.length + right.length)
+
+  const renderBars = (data, colors) =>
+    data.map(({date}, index) =>
+      <div
+        key={index}
+        style={{
+          bottom: DateUtils.datePointInRange(from, to, date.from) + '%',
+          height: DateUtils.datesToPercentage(from, to, date.from, date.to) + '%',
+          backgroundColor: `hsl(${colors[index]}, 55%, 80%)`
+        }}/>
+    )
+  const renderItems = (data, colors) =>
+    data.map(({title, subtitle, text, link}, index) =>
+      <div
+        key={index}
+        style={{
+          borderTop: `solid 5px hsl(${colors[index]}, 55%, 80%)`
+        }}>
+        <a href={link}>
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+          <p>{text}</p>
+        </a>
+      </div>
+    )
 
   return (
     <div className="Timeline">
@@ -25,34 +52,10 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
       <h1 className="LeftTitle">{leftTitle}</h1>
       <div className="Left">
         <div className="Bars">
-        {
-          left.map(({date}, index) =>
-            <div
-              key={index}
-              style={{
-                bottom: DateUtils.datePointInRange(from, to, date.from) + '%',
-                height: DateUtils.datesToPercentage(from, to, date.from, date.to) + '%',
-                backgroundColor: `hsl(${leftColors[index]}, 55%, 80%)`
-              }}/>
-          )
-        }
+          {renderBars(left, leftColors)}
         </div>
         <div className="Items">
-        {
-          left.map(({title, subtitle, text, link}, index) =>
-            <div
-              key={index}
-              style={{
-                borderTop: `solid 5px hsl(${leftColors[index]}, 55%, 80%)`
-              }}>
-              <a href={link}>
-                <h1>{title}</h1>
-                <h2>{subtitle}</h2>
-                <p>{text}</p>
-              </a>
-            </div>
-          )
-        }
+          {renderItems(left, leftColors)}
         </div>
       </div>
 
@@ -60,6 +63,12 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
 
       <h1 className="RightTitle">{rightTitle}</h1>
       <div className="Right">
+        <div className="Bars">
+          {renderBars(right, rightColors)}
+        </div>
+        <div className="Items">
+          {renderItems(right, rightColors)}
+        </div>
       </div>
 
     </div>

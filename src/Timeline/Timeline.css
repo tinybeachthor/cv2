@@ -51,7 +51,6 @@
 
 .Items {
   min-height: 100%;
-  margin-right: 25px;
 
   display: grid;
   flex-direction: column;
@@ -60,6 +59,13 @@
   align-items: stretch;
   grid-gap: 2rem;
 }
+.Left > .Items {
+  margin-right: 25px;
+}
+.Right > .Items {
+  margin-left: 25px;
+}
+
 .Items > div {
   padding: 5px;
 }
