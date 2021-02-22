@@ -1,5 +1,6 @@
 import React from 'react'
 import LinkUtils from './link-utils'
+import { SocialIcon } from 'react-social-icons'
 
 import './Header.css'
 
@@ -10,9 +11,12 @@ const Header = ({name, links, contacts}) => {
       <div className="Links">
       {
         links.map((link, index) =>
-          <div key={index}>
-            <a href={link}>{link}</a>
-          </div>
+          <SocialIcon
+            key={index}
+            url={link}
+            bgColor="hsl(0, 0%, 5%)"
+            fgColor="white"
+          />
         )
       }
       </div>

@@ -20,6 +20,14 @@
   grid-area: Links;
 
   text-align: center;
+
+  display: grid;
+  grid-gap: 1px;
+  align-items: center;
+  justify-content: center;
+}
+.Header .Links > * {
+  grid-row: 1;
 }
 
 .Header .Contacts {
