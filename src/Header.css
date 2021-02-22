@@ -1,10 +1,12 @@
 .Header {
-  padding: 10px;
+  padding: 10px 35px 0 35px;
 
   display: grid;
-  grid-template-areas: 'Name Links Contacts';
+  grid-template-areas:
+    'Name  Contacts'
+    'Links null';
   grid-template-columns: max-content auto min-content;
-  grid-gap: 1rem;
+  grid-template-rows: min-content min-content;
 }
 
 .Header .Name {
@@ -12,8 +14,11 @@
   margin: 0;
 
   font-family: monospace;
-  font-size: 36px;
+  font-size: 48px;
   text-align: left;
+
+  display: flex;
+  align-items: center;
 }
 
 .Header .Links {
@@ -24,7 +29,7 @@
   display: grid;
   grid-gap: 1px;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .Header .Links > * {
   grid-row: 1;
@@ -37,5 +42,19 @@
   margin: 0;
   padding: 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Header .Contacts > * {
+  width: 100%;
   text-align: right;
+  padding: 1px;
+}
+.Header .Contacts * {
+  text-decoration: none;
+  font-family: monospace;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
 }

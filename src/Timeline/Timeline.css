@@ -1,5 +1,5 @@
 .Timeline {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 
   display: grid;
   grid-template-areas:
@@ -7,6 +7,14 @@
   'Left      Years Right';
   grid-template-columns: 1fr min-content 1fr;
   grid-template-rows: min-content auto;
+}
+
+.LeftTitle, .RightTitle {
+  margin: 0.25rem 1rem 0.5rem 1rem;
+
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .LeftTitle {
@@ -64,11 +72,6 @@
   font-size: 12px;
 }
 
-.LeftTitle, .RightTitle {
-  font-family: monospace;
-  font-size: 22px;
-  font-weight: 500;
-}
 .Items {
   font-family: monospace;
   text-align: left;

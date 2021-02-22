@@ -16,6 +16,10 @@ const Header = ({name, links, contacts}) => {
             url={link}
             bgColor="hsl(0, 0%, 5%)"
             fgColor="white"
+            style={{
+              height: 30,
+              width: 30,
+            }}
           />
         )
       }
