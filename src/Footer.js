@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="Links">
         <div>
           <span>Up-to-date version available online: </span>
-          <a href={window.location.href}>{window.location.href}</a>
+          <a href={window.location.origin}>{window.location.origin}</a>
         </div>
         <div>
           <span>Template available (MIT License): </span>
