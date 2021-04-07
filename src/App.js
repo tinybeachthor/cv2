@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Header from './Header'
+import Footer from './Footer'
 import Timeline from './Timeline/Timeline'
 
 import {name, links, contacts, education, experience} from './cv.json'
@@ -20,6 +21,8 @@ function App() {
         left={education}
         rightTitle="experience"
         right={experience}
+      />
+      <Footer
       />
     </div>
   );
