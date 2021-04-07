@@ -1,5 +1,6 @@
 .Timeline {
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 25px 10px;
+  position: relative;
 
   display: grid;
   grid-template-areas:
@@ -7,6 +8,14 @@
   'Left      Years Right';
   grid-template-columns: 1fr min-content 1fr;
   grid-template-rows: min-content auto;
+}
+.Timeline::after {
+  content: "";
+  border-bottom: 2px dashed black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 12.5px);
 }
 
 .LeftTitle, .RightTitle {
@@ -92,4 +101,5 @@
 }
 .Items ul {
   padding-left: 0.75rem;
+  margin-top: 0.25rem;
 }
