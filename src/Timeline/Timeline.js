@@ -41,7 +41,14 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
         <a href={link}>
           <h1>{title}</h1>
           <h2>{subtitle}</h2>
-          <p>{text}</p>
+          <ul>
+            {(text || []).map((subitem, index) =>
+            <li
+              key={index}>
+              {subitem}
+            </li>
+            )}
+          </ul>
         </a>
       </div>
     )

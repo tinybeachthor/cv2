@@ -90,3 +90,6 @@
   font-size: 14px;
   margin: 0;
 }
+.Items ul {
+  padding-left: 0.75rem;
+}
