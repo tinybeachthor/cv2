@@ -14,11 +14,11 @@ const Header = ({name, links, contacts}) => {
           <SocialIcon
             key={index}
             url={link}
-            bgColor="hsl(0, 0%, 5%)"
+            bgColor="hsl(0, 0%, 0%)"
             fgColor="white"
             style={{
-              height: 37.5,
-              width: 37.5,
+              height: 32,
+              width: 32,
             }}
           />
         )
