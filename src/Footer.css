@@ -19,3 +19,11 @@
   font-size: 14px;
   font-family: monospace;
 }
+.Footer .Buttons > div {
+  display: grid;
+  grid-gap: 7.5px;
+  grid-auto-flow: column;
+  justify-content: right;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 100%;
+}

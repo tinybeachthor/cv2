@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Footer.css'
 
@@ -17,7 +18,12 @@ const Footer = () => {
       </div>
       <div className="Buttons">
         <div>
-          JSON
+          <Link to="/">
+            default
+          </Link>
+          <Link to="/json">
+            JSON
+          </Link>
         </div>
       </div>
     </div>
