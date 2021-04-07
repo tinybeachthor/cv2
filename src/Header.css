@@ -1,5 +1,6 @@
 .Header {
-  padding: 10px 35px 0 35px;
+  padding: 10px 35px 30px 35px;
+  position: relative;
 
   display: grid;
   grid-template-areas:
@@ -7,6 +8,14 @@
     'Links Contacts';
   grid-template-columns: max-content auto min-content;
   grid-template-rows: min-content min-content;
+}
+.Header::after {
+  content: "";
+  border-bottom: 2px dashed black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 12.5px);
 }
 
 .Header .Name {
@@ -44,7 +53,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .Header .Contacts > * {
   width: 100%;
