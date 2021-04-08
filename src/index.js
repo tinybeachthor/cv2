@@ -11,6 +11,10 @@ import {
 
 import JSONView from './JSONView'
 
+import {name} from './cv.json'
+
+document.title = `CV - ${name}`
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
