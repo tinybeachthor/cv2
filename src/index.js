@@ -15,11 +15,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
         <Route path="/json">
           <JSONView />
+        </Route>
+        <Route path="/">
+          <App />
         </Route>
       </Switch>
     </Router>
