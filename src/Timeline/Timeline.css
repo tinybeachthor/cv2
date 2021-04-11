@@ -4,8 +4,8 @@
 
   display: grid;
   grid-template-areas:
-  'LeftTitle null  RightTitle'
-  'Left      Years Right';
+  'LeftTitle null      RightTitle'
+  'Left      LeftYears Right';
   grid-template-columns: 1fr min-content 1fr;
   grid-template-rows: min-content auto;
 }
@@ -33,7 +33,6 @@
 }
 .Left {
   grid-area: Left;
-
   position: relative;
 }
 .RightTitle {
@@ -43,7 +42,6 @@
 }
 .Right {
   grid-area: Right;
-
   position: relative;
 }
 
@@ -102,4 +100,30 @@
 .Items ul {
   padding-left: 0.75rem;
   margin-top: 0.25rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .Timeline {
+    grid-template:
+      'RightTitle RightTitle' min-content
+      'Right      RightYears' auto
+      'null       null'       25px
+      'LeftTitle  LeftTitle'  min-content
+      'Left       LeftYears'  auto
+      / 1fr min-content;
+  }
+  .Left > .Bars > *, .Right > .Bars > * {
+    right: 5px;
+    left: auto;
+  }
+  .Left > .Items, .Right > .Items {
+    margin-left: 0px;
+    margin-right: 25px;
+  }
+  .LeftTitle, .RightTitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 20px;
+  }
 }

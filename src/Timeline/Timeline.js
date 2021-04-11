@@ -56,6 +56,9 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
   return (
     <div className="Timeline">
 
+      <Years from={from} to={to} name="LeftYears" />
+      <Years from={from} to={to} name="RightYears"/>
+
       <h1 className="LeftTitle">{leftTitle}</h1>
       <div className="Left">
         <div className="Bars">
@@ -65,8 +68,6 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
           {renderItems(left, leftColors)}
         </div>
       </div>
-
-      <Years from={from} to={to} />
 
       <h1 className="RightTitle">{rightTitle}</h1>
       <div className="Right">
