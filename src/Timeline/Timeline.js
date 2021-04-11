@@ -36,7 +36,7 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
       <div
         key={index}
         style={{
-          borderTop: `solid 5px hsl(${colors[index]}, 55%, 80%)`
+          borderTop: `solid 10px hsl(${colors[index]}, 55%, 80%)`
         }}>
         <a href={link}>
           <h1>{title}</h1>
