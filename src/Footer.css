@@ -27,3 +27,9 @@
   grid-template-columns: min-content min-content;
   grid-template-rows: 100%;
 }
+
+@media print {
+  .Footer .Buttons {
+    display: none;
+  }
+}
