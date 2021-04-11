@@ -60,11 +60,11 @@
   min-height: 100%;
 
   display: grid;
-  flex-direction: column;
   justify-content: center;
   align-content: space-around;
   align-items: stretch;
   grid-gap: 2rem;
+  grid-template-columns: 100%;
 }
 .Left > .Items {
   margin-right: 25px;
