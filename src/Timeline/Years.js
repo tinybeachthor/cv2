@@ -14,7 +14,7 @@ const Years = ({ from, to, name }) => {
       gridArea: name,
     }}>
       <div className="Year" style={{
-        flex: DateUtils.yearFraction(to)
+        flexGrow: DateUtils.yearFraction(to)
       }}>
         <div className="Bar"></div>
         <div className="Label">
