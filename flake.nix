@@ -14,5 +14,8 @@
           inherit system;
           overlays = [ tinybeachthor.overlay ];
         });
-      in { devShell = import ./shell.nix { inherit pkgs; }; });
+      in {
+        devShell = import ./shell.nix { inherit pkgs; };
+        defaultPackage = import ./default.nix { inherit pkgs; };
+      });
 }

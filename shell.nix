@@ -11,7 +11,6 @@ mkShell {
     yarn
 
     rclone
+    yarn2nix
   ];
-  shellHook = ''
-  '';
 }
