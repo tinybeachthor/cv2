@@ -22,15 +22,34 @@ const Timeline = ({leftTitle, left, rightTitle, right}) => {
   const rightColors = colors.slice(left.length, left.length + right.length)
 
   const renderBars = (data, colors) =>
-    data.map(({date}, index) =>
-      <div
-        key={index}
-        style={{
-          bottom: DateUtils.datePointInRange(from, to, date.from) + '%',
-          height: DateUtils.datesToPercentage(from, to, date.from, date.to) + '%',
-          backgroundColor: `hsl(${colors[index]}, 55%, 80%)`
-        }}/>
-    )
+    data.map(({date}, index) => {
+      if (date === null)
+        return null;
+
+      switch (typeof date) {
+        case 'object': return (
+          <div
+            key={index}
+            className="Range"
+            style={{
+              bottom: DateUtils.datePointInRange(from, to, date.from) + '%',
+              height: DateUtils.datesToPercentage(from, to, date.from, date.to) + '%',
+              backgroundColor: `hsl(${colors[index]}, 55%, 80%)`
+            }}/>
+        );
+        case 'string': return (
+          <div
+            key={index}
+            className="Point"
+            style={{
+              bottom: DateUtils.datePointInRange(from, to, date) + '%',
+              backgroundColor: `hsl(${colors[index]}, 55%, 80%)`
+            }}/>
+        );
+        default:
+          return null;
+      }
+    })
   const renderItems = (data, colors) =>
     data.map(({title, subtitle, text, link}, index) =>
       <div
