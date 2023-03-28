@@ -11,9 +11,9 @@ import {
 
 import JSONView from './JSONView'
 
-import {name} from './cv.json'
+import data from './cv.json'
 
-document.title = `CV - ${name}`
+document.title = `CV - ${data.name}`
 
 ReactDOM.render(
   <React.StrictMode>

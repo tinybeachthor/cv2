@@ -4,11 +4,13 @@ import Header from './Header'
 import Footer from './Footer'
 import Timeline from './Timeline/Timeline'
 
-import {name, links, contacts, education, experience} from './cv.json'
+import data from './cv.json'
 
 import './App.css'
 
 function App() {
+  const { name, links, contacts, education, experience } = data
+
   return (
     <div className="App">
       <Header
